@@ -3,16 +3,20 @@
  
 <table>
   <tr>
+  	<th>S.No.</th>
     <th>Title</th>
     <th>Description</th>
     <th>Year Released</th>
   </tr>
  
+	<% i=1 %>
   <% @movies.each do |movie| %>
     <tr>
+      <td><%= i %></td>	
       <td><%= movie.title %></td>
       <td><%= movie.description %></td>
       <td><%= movie.year_released %></td>
     </tr>
+  <%  i+=1 %>
   <% end %>
 </table>
