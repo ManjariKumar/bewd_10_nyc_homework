@@ -16,6 +16,8 @@
       <td><%= movie.title %></td>
       <td><%= movie.description %></td>
       <td><%= movie.year_released %></td>
+      <td><%= link_to 'Show', movie_path(movie) %></td>
+      <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
     </tr>
   <%  i+=1 %>
   <% end %>
