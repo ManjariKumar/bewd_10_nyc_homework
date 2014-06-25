@@ -1,5 +1,11 @@
 <h1>Welcome to Rewsly</h1>
 
+
+<%= form_tag "/stories", method: "GET" do %>
+	<%= text_field_tag :q, params[:q] %>
+	<%= submit_tag "Search" %>
+<%end%>
+
 <table>
   <tr>
     <th>S.No.</th>
