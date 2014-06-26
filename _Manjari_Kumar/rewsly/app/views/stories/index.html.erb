@@ -22,6 +22,7 @@
   <% end %>
   
 </table>
-
+<% if user_signed_in? %>
 <td><%= link_to 'Add New Story', new_story_path %></td>
+<%end%>
 

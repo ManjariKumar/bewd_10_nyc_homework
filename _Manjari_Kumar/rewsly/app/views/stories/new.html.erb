@@ -1,6 +1,6 @@
 <h1>Stories#new</h1>
 
-
+<% if user_signed_in? %>
 <%= form_for(@story) do |f| %>
 	<% if @story.errors.any? %>
 	  <div id="error explanation">
@@ -36,4 +36,8 @@
 	  <p>
 	  	<%= f.submit %>
 	  </p>
+
+	  <%= link_to 'Back to all stories', stories_path%>
+
+<% end %>
 <% end %>

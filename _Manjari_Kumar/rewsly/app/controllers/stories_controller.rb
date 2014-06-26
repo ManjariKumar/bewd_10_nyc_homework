@@ -1,7 +1,11 @@
 class StoriesController < ApplicationController
-  before_filter :load_resources, only: [:show, :new]
   
-    # @shirts = Shirt.search_for(params[:q]) || Shirt.all
+  # before_action :authenticate_user! placed inside App Cntrlr
+  skip_before_action :authenticate_user!, only: :index
+  
+  # before_filter :load_resources, only: [:show, :new]
+  
+  
 
   def index
   	@stories = Story.all
